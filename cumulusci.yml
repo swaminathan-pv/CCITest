@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.18.0'
+project:
+    name: AMS-COOL-BE-CRM
+    package:
+        name: AMS-COOL-BE-CRM
+        api_version: '49.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/AMS-COOL-BE-CRM/tests
+            options:
+                outputdir: robot/AMS-COOL-BE-CRM/results
+
+    robot_testdoc:
+        options:
+            path: robot/AMS-COOL-BE-CRM/tests
+            output: robot/AMS-COOL-BE-CRM/doc/AMS-COOL-BE-CRM_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 90
